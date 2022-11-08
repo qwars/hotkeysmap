@@ -1,12 +1,8 @@
 FROM node:18-alpine
 
-EXPOSE 9090
+EXPOSE 9080
 
 WORKDIR /usr/src
-
-COPY .npmrc ./
-
-COPY .yarnrc ./
 
 COPY package*.json ./
 

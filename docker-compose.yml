@@ -7,11 +7,9 @@ services:
     image: node:18-alpine
     container_name: web-ui
     ports:
-      - 9090:9090
+      - 9080:9080
     volumes:
-      - ./.yarnrc:/usr/src/admin-ui/.yarnrc
-      - ./.npmrc:/usr/src/admin-ui/.npmrc
-      - ./develop:/usr/src/admin-ui/develop:rw
-      - ./package.json:/usr/src/admin-ui/package.json:rw
-      - ./webpack.config.js:/usr/src/admin-ui/webpack.config.js
+      - ./develop:/usr/src/develop:rw
+      - ./package.json:/usr/src/package.json:rw
+      - ./webpack.config.js:/usr/src/webpack.config.js
     command: "yarn start --host 0.0.0.0"

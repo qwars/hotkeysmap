@@ -78,9 +78,6 @@ module.exports = (env, argv) => ({
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components|javascripts)/,
-                include: [
-                    path.resolve(__dirname, "node_modules/@apollo"),
-                ],
                 use: {
                     loader: 'babel-loader',
                     options: {

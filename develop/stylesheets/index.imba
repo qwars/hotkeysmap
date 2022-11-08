@@ -1,4 +1,3 @@
-import './index.styl'
 
 def rectVisibleLayer el
 	const bounding = el:firstElementChild:nextElementSibling.getBoundingClientRect
