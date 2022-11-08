@@ -1,0 +1,34 @@
+html
+	min-height: 100vh
+	margin: 0px
+	padding: 0px
+	height: 100%
+
+body
+	margin: 0px
+	padding: 0px
+	-webkit-font-smoothing: antialiased
+	display: grid
+	grid-template-rows: auto 1fr auto
+	min-height: 100vh
+	max-height: 100vh
+	min-width: 640px
+	font: var( --font-text )
+	gap: 1rem
+	background-color: var(--canvas-color, Canvas)
+	color: var(--text-color, CanvasText)
+	overflow: hidden
+	& > *
+		place-self: stretch
+	// ::selection
+	// 	box-shadow: none
+	// 	outline: 0px solid transparent
+	:focus
+		box-shadow: none
+		outline: 0px solid transparent
+	& > output
+		position: fixed
+
+[hidden]
+	display: none !important
+

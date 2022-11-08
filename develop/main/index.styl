@@ -1,0 +1,25 @@
+
+main
+	display: grid
+	grid-template-rows: auto 1fr
+	grid-template-columns: auto 1fr auto
+	grid-template-areas: "menu menu menu" "navigation article aside"
+	gap: 0px 1rem
+	& > article
+		grid-area: article
+		display: flex
+		place-self: stretch
+		height: 0px
+		min-height: 100%
+		overflow: auto
+	& > nav
+		grid-area: navigation
+		place-self: stretch
+		min-height: 100%
+		height: 0px
+	& > aside
+		grid-area: aside
+	& > menu
+		grid-area: menu
+		margin: 0px
+		padding: 0 1rem

@@ -1,0 +1,83 @@
+
+.admin-ui
+
+	@import './fonts.styl'
+	@import './colors.styl'
+	@import './tags-styling.styl'
+	@import './class-styling.styl'
+
+
+	{ fonts }
+	{ colors }
+
+	font: var( --font-text )
+	color: var( --c_text_primary )
+
+	{ tags-style }
+
+	& > menu
+		display: flex
+		align-items: center
+		justify-content: space-between
+		box-sizing: border-box
+		border-bottom: .125rem solid var(--c_line_primary)
+		min-height: 3rem
+		user-select: none
+		& > nav
+			flex-grow: 1
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			a
+				text-decoration: none
+				color: var( --c_text_primary )
+				font: var( --font-extra-sm )
+				padding: 0px .5rem
+				white-space: nowrap
+				text-transform: capitalize
+				&:hover
+					color: var(--c_action_hover)
+
+	& > nav
+		width: 0px
+		&[open]
+			width: 19rem
+		& > ul
+			float: right
+			list-style: none
+			width: 17rem
+			ul
+				list-style: none
+				padding: 0px 0px 0px 1rem
+				width: auto
+			li
+				a
+					color: var(--c_text_primary)
+					width: -webkit-fill-available
+				.local-link a
+					color: var(--c_action)
+				legend
+					height: 2rem
+					display: flex
+					align-items: center
+					cursor: pointer
+					& + ul
+						overflow: hidden
+						& > li
+							margin-top: -100%
+				legend.local-link + ul > li
+					margin-top: 0%
+					transition: margin-top .3s
+
+		ul:empty
+			display: none
+
+	& > aside
+		display: block
+
+	& > article
+		display: grid
+		grid-template-rows: 1fr
+		grid-template-columns: 1fr
+		& > section
+			place-self: stretch

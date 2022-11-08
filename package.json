@@ -1,0 +1,13 @@
+{
+  "name": "snippets-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/javascripts/application.js",
+  "author": "Alexandr Selunin <aka.qwars@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --port 9090 --mode development --devtool source-map --hot ",
+    "build": "webpack --mode production"
+  }
+}
